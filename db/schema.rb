@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150503182917) do
 
   create_table "pages", force: true do |t|
-    t.string   "name",                 null: false
+    t.string   "title",                null: false
     t.string   "slug",                 null: false
     t.text     "description"
     t.integer  "parent_page_id"

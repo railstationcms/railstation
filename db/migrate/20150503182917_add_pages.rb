@@ -1,7 +1,7 @@
 class AddPages < ActiveRecord::Migration
   def change
     create_table :pages do |t|
-      t.string :name, null: false
+      t.string :title, null: false
       t.string :slug, null: false
       t.text :description
       t.integer :parent_page_id
