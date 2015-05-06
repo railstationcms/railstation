@@ -2,8 +2,8 @@ class AddPages < ActiveRecord::Migration
   def change
     create_table :pages do |t|
       t.string :title, null: false
-      t.string :slug, null: false
       t.string :path, null: false
+      t.string :slug
       t.text :description
       t.integer :parent_page_id
       t.integer :user_id
@@ -11,6 +11,7 @@ class AddPages < ActiveRecord::Migration
       t.integer :page_template_id
       t.integer :theme_id
       t.boolean :active
+      t.boolean :hidden
       t.integer :symlinked_page_id
       t.boolean :external_link
       t.string :external_link_url

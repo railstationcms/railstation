@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20150503182917) do
 
   create_table "pages", force: true do |t|
     t.string   "title",                null: false
-    t.string   "slug",                 null: false
     t.string   "path",                 null: false
+    t.string   "slug"
     t.text     "description"
     t.integer  "parent_page_id"
     t.integer  "user_id"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150503182917) do
     t.integer  "page_template_id"
     t.integer  "theme_id"
     t.boolean  "active"
+    t.boolean  "hidden"
     t.integer  "symlinked_page_id"
     t.boolean  "external_link"
     t.string   "external_link_url"
