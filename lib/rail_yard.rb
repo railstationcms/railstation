@@ -3,8 +3,8 @@ class RailYard
     Railstation::Application.routes.draw do
       if defined? Page
         Page.all.each do |pg|
-          puts "Routing #{pg.slug}"
-          get "/#{pg.slug}", :to => "pages#show", defaults: { id: pg.id }
+          puts "Routing #{pg.path}"
+          get pg.path, :to => "pages#show", defaults: { id: pg.id }
         end
       end
     end

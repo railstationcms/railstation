@@ -6,7 +6,13 @@ class PagesController < ApplicationController
 
   def home
     @page = Page.find_by(id: 1)
-    redirect_to not_found_path unless @page
+    if @page
+      render :show
+      return
+    else
+      redirect_to install_path
+      return
+    end
   end
 
   def not_found
