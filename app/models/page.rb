@@ -1,4 +1,6 @@
 class Page < ActiveRecord::Base
+  versioned
+
   validates :title, :path, uniqueness: true, presence: true
   validates :slug, presence: true, if: :pages_exist?
 

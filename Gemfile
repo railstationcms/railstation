@@ -28,6 +28,7 @@ gem 'spring', group: :development
 
 gem 'sinatra'
 gem 'acts_as_list'
+gem 'vestal_versions', :git => 'git://github.com/laserlemon/vestal_versions'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
